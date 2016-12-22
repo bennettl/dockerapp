@@ -15,9 +15,7 @@ test:
 
 deployment:
 	hub:
-		branch:
-			- master
-			- deployment
+		branch: [master, deploymenta]
 		commands:
 			- docker login -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
 			- docker tag dockerapp_dockerapp $DOCKER_HUB_USER_ID/dockerapp:$CIRCLE_SHA1
